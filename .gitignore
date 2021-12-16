@@ -1,0 +1,15 @@
+#ignore all logs
+*.log
+
+#ignore the downloads
+downloads/
+
+#ignore pycharm project
+.idea/
+
+#ignore the youtube links file
+/links.txt
+/settings.txt
+
+#project plan
+project plan.txt
