@@ -4,6 +4,10 @@
 #ignore the downloads
 downloads/
 
+#ignore the download logs
+download list.csv
+
+
 #ignore pycharm project
 .idea/
 

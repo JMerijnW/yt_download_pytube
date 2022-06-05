@@ -1,12 +1,10 @@
 from re import match as match_str
-#from pytube import YouTube
+from pytube import YouTube, Playlist
 
 # examples
 '''
 'https://www.youtube.com/playlist?'
 'https://www.youtube.com/watch?'
-'https://www.youtube.com/watch?v=pAzEY1MfXrQ'
-'https://www.youtube.com/watch?v=pAzEY1MfXrQ&list=PLIuMnu__lJkHs-FeeTvhx-T6Gs15-kfgc&index=3'
 '''
 
 link = 'https://www.youtube.com/watch?v=pAzEY1MfXrQ'
@@ -24,21 +22,19 @@ with open('../links.txt', 'r') as link_file:
     print(f"Link file: {link_file.name}\nContains: ")
     # print(link_file.readline()[:-1])  # .readline()[:-1] & .readlines() repr(link_file.read())
 
-    for line in link_file:
-        print(line)
-        print(link_file.readline())
-        print("\n---")
+    for line in link_file.readlines():
+        print(line[:-1])
+        #print(link_file.readlines())
+        print("---")
 
 
 
 
 # Playlist object is a list with links
 vid_list = Playlist('https://www.youtube.com/playlist?list=PLIuMnu__lJkHs-FeeTvhx-T6Gs15-kfgc')
-# audio = vid_list.streams.only_audio()
 
-'https://www.youtube.com/playlist?'
-'https://www.youtube.com/watch?'
-'https://www.youtube.com/watch?v=pAzEY1MfXrQ'
+
+
 
 
 print(f'Playlist: {vid_list.title}\nInhoud:')
